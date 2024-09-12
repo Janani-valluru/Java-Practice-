@@ -1,0 +1,38 @@
+
+import java.io.*;        // For input/output operations
+import java.util.*;      // For utilities like Scanner, List, etc.
+import java.text.*;      // For text formatting classes
+import java.math.*;      // For math-related classes like BigDecimal
+import java.util.regex.*; // For regular expression handling
+
+public class Main {
+
+    public static void main(String[] args){
+        Scanner s =new Scanner(System.in);
+       double valueToFormat = s.nextDouble();
+       s.close();
+         
+          Locale indiaLocale = new Locale("en", "IN"); 
+ 
+        
+        
+         NumberFormat USFormat = NumberFormat.getCurrencyInstance(Locale.US);
+         String formattedStringUs =      USFormat.format(valueToFormat);
+         NumberFormat inrFormatter = NumberFormat.getCurrencyInstance(indiaLocale); 
+          String formattedStringcIndia = inrFormatter.format(valueToFormat);
+         NumberFormat ChinaFormat = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        String formattedStringcChina = ChinaFormat.format(valueToFormat);     
+        NumberFormat franceFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        
+        String formattedStringFrance = franceFormat.format(valueToFormat);
+       
+       
+       
+     System.out.println("US: " + formattedStringUs);
+     
+    System.out.println("India: " + formattedStringcIndia);
+    System.out.println("China: " + formattedStringcChina);
+    System.out.println("France: " + formattedStringFrance);
+          
+    }
+}
