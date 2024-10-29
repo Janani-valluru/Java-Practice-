@@ -1,3 +1,5 @@
+//tuf
+
 public class pattern6 {
    
    static void erect_pyramid(int N)
